@@ -18,11 +18,10 @@ namespace ConectarPostgreCSharp
             conec.conectarBD();
 
             // Consula de datos
-            DataTable tabla;
             try
             {
                 // Guardamos en tabla la DataTable que devuelve el metodo
-                tabla = conec.consultarBD("SELECT * FROM gbp_almacen.gbp_alm_cat_libros");
+                DataTable tabla = conec.consultarBD("SELECT * FROM gbp_almacen.gbp_alm_cat_libros");
 
                 // Recorremos la DataTable para mostrar las columnas de cada fila
                 foreach (DataRow row in tabla.Rows)
